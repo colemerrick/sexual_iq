@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: 1
+  school: MyString
+  zip_code: 1
+  score: 1
+
+two:
+  age: 1
+  school: MyString
+  zip_code: 1
+  score: 1
