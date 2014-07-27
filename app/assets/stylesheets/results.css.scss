@@ -88,12 +88,9 @@
   	display: none;
     position: relative;
     text-align: center;
-    top: -50px; }
-    #submit_results p {
-      display: inline; }
-      #submit_results input {
-        background: none;
+    //top: -50px; 
+  }
 
-
-      }
-
+  .inline {
+    display: inline-block;
+  }

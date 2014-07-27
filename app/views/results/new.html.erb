@@ -7,25 +7,35 @@
 <div id="submit_results" class="col-md-10 col-md-offset-1">
 	<%= form_for :result, url: results_path do |f| %>
 		
-	  <p>
+	  <div class="inline">
 	    <%= f.label :age %><br>
+    </div>
+    <div class="inline">
 	    <%= f.text_field :age %>
-	  </p>
+    </div>
+	  
+    <div style="clear:both;"></div>
 	 
-	  <p>
+	  <div class="inline">
 	    <%= f.label :school %><br>
-	    <%= f.text_area :school %>
-	  </p>
+    </div>
+    <div class="inline">
+	    <%= f.text_field :school %>
+    </div>
 
-	  <p>
+    <div style="clear:both;"></div>
+	  <div class="inline">
 	    <%= f.label :zip_code %><br>
+    </div>
+    <div class="inline">
 	    <%= f.text_field :zip_code %>
-	  </p>
+    </div>
+	  
 	 
-	  <p>
+	  <div style="display: none;">
 	    <%= f.label :score %><br>
-	    <%= f.text_area :score %>
-	  </p>
+      <%= f.text_area :score, id: "score_amount" %>
+	  </div>
 	 
 	  <p>
 	    <%= f.submit %>
@@ -184,11 +194,35 @@
          $('#choice-block').empty();
          $('#submitbutton').remove();
          $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+
          $(document.createElement('h2')).css({
              'text-align': 'center',
              'font-size': '4em'
          }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+
          $('#submit_results').show();
+         $("#score_amount").val(score / quiz.length * 100);
+
+         parseInt(score);
+         if ( score > 2 ) {
+            $('#explanation').text("You are a sexpert!!");
+         } else {
+            $('#explanation').text("You are a casual sexpert!!");
+         };
+
+          //WHY DOES THIS NOT WORK
+         // parseInt(score);
+         // if ( score > 2 ) {
+         //    $(document.createElement('p')).css({
+         //     'text-align': 'center',
+         //     'font-size': '3em'
+         // }).text('You are a sexpert!').insertAfter('#score_amount');
+         // } else {
+         //    $(document.createElement('p')).css({
+         //     'text-align': 'center',
+         //     'font-size': '3em'
+         //    }).text('You are a casual sexpert!').insertAfter('#score_amount');
+         // };
  
      }
 
