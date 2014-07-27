@@ -23,16 +23,15 @@
       font-weight:700;
   }
   #frame {
-      max-width:620px;
+      //max-width:620px;
       width:auto;
-      border:1px solid #ccc;
       background:#fff;
       padding:10px;
       margin:3px;
   }
   h1 {
       font:normal bold 2em/1.8em"Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-align:left;
+      text-align:center;
       border-bottom:1px solid #999;
       padding:0;
       width:auto
@@ -87,4 +86,14 @@
 
   #submit_results {
   	display: none;
-  }
+    position: relative;
+    text-align: center;
+    top: -50px; }
+    #submit_results p {
+      display: inline; }
+      #submit_results input {
+        background: none;
+
+
+      }
+

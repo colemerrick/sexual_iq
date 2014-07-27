@@ -1,8 +1,10 @@
 <!--hello-->
-<div id = "frame"
-role = "content" >
-    
-<div id="submit_results" class="col-md-10 col-md-offset-1" style="margin-top:10%;">
+<div class="col-md-6 col-md-offset-3">
+    <div id = "frame"
+    role = "content" >
+</div>
+<div style="clear:both;"></div>
+<div id="submit_results" class="col-md-10 col-md-offset-1">
 	<%= form_for :result, url: results_path do |f| %>
 		
 	  <p>
@@ -32,10 +34,11 @@ role = "content" >
 </div>
 
 <script>
+ 
  var quiztitle = "What's Your Sexual IQ?";
 
-
  var quiz = [
+ 
         {
             "question" : "Q1: Using two condoms is safer.",
             //"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/220px-Albert_Einstein_Head.jpg",
@@ -54,7 +57,7 @@ role = "content" >
                                     "False"
                                 ],
             "correct" : "False",
-            "explanation" : "You do not need a parent to get advice.  In fact there are many resources local to Los Angeles like clarishealth.org.",
+            "explanation" : "You do not need a parent to get advice.  In fact there are many resources local to Los Angeles like ClarisHealth.org",
         },
         {
             "question" : "You cannot get sexually transmitted diseases through anal sex.",
@@ -115,6 +118,7 @@ role = "content" >
 
 
      function processQuestion(choice) {
+
          if (quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']) {
              $('.choice').eq(choice).css({
                  'background-color': '#50D943'
@@ -228,4 +232,5 @@ role = "content" >
 
      init();
  });
+
 </script>
