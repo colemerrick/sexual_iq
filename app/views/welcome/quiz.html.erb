@@ -1,0 +1,36 @@
+<!--coolness-->
+<script>
+	// hello
+	var score = 0;
+
+	var questions = [
+		['Using two condoms is safer.', 'false'],
+		['You need a parent to get advice.', 'false'],
+		['You cannot get sexually transmitted deseases through anal sex.', 'false'],
+		
+	 	
+	];
+
+	function askQuestion(question) {
+		var answer = prompt(question[0],'');
+			if (answer == question[1]) {
+				alert('Correct!');
+				score++;
+			} else {
+				alert('Sorry. The correct answer is ' + question[1]);
+			};
+
+	};
+
+	for (var i=0; i<questions.length; i++) {
+		askQuestion(questions[i]);
+	};
+</script>
+
+<script>
+	var message = 'You got ' + score;
+	message += ' out of ' + questions.length;
+	message += ' questions correct.';
+	document.write('<p style="margin-top: 20%;">' + message + '</p>');
+
+</script>
