@@ -1,5 +1,5 @@
 
-$(function() {
+// $(function() {
 // 	var question1;
 // 	var question2;
 // 	var question3;
@@ -13,27 +13,28 @@ $(function() {
 //  //        how_you_feel = $(this).val();
 //  //        console.log(how_you_feel);
 //  //      });
-	var question1
-    var true1;
-    var false1;
+	
+ //    var true1;
+ //    var false1;
 
-	//Get each question result
-	$('#true1').click(function() {
-		true1 = $(this).val();
-		console.log(true1);
-	});
+	// //Get each question result
 
-	$('#false1').click(function() {
-		false1 = $(this).val();
-		console.log(false1);
-	});
+	// $('#true1').click(function() {
+	// 	true1 = $(this).val();
+	// 	console.log(true1);
+	// });
 
-	if (true) {
-		question1 = 0
-	} else {
-		question1 = 1
-	};
-	console.log(question1);
+	// $('#false1').click(function() {
+	// 	false1 = $(this).val();
+	// 	console.log(false1);
+	// });
+	// var question1
+	// if (true) {
+	// 	question1 = 0
+	// } else {
+	// 	question1 = 1
+	// };
+	// console.log(question1);
 
 
 
@@ -103,7 +104,7 @@ $(function() {
 //       $(".btn:first-child").val($(this).text());
 //    });
 // });
-});
+//});
 
 //Tally result, add up question1, 2, 3, 4, and 5
 
