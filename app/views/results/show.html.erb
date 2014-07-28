@@ -1,5 +1,5 @@
 <% content_for :top_menu do %>
-	<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <div class="row">
@@ -19,6 +19,11 @@
 		<div style="clear:both; height: 20px; width:100%;"></div>
 		<p style="font-size:30px;display:inline-block;">Score:</p><p style="font-size:30px;display:inline-block;color: #9013fe;margin-left:8px;"><%= @result.score %>%</p>
 	</div>
+</div>
+
+<div class="col-md-4 col-md-offset-4">
+	<!--<div class="frame"></div>-->
+	<%= image_tag "citychart.png", style: "width: 371px; height: auto; margin-top:10px;" %>
 </div>
 
 <div class="col-md-4 col-md-offset-4">
