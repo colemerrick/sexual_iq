@@ -3,9 +3,19 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row">
-          <div class="col-md-4 col-md-offset-4">
+          <div>
             <!--<div class="frame"></div>-->
-            <%= image_tag "resultsheading.png", style: "width: 371px; height: auto; margin-top:10px;" %>
+            <%= image_tag "logohomepage.png", style: "width: 150px;
+height: auto;
+position: relative;
+text-align: center;
+float: center;
+position: relative;
+display: block;
+left: 50%;
+margin-left: -73px;
+margin-top: 50px;" %>
+
           </div>
         </div>
       </div>
@@ -15,6 +25,17 @@
 
 <div class="col-md-4 col-md-offset-4" style="text-align: center;">
   <div class="frame_invisible">
+    <div>
+      <p style="font-size:35px;display:inline-block;">Are you a</p><p style="font-size:35px;display:inline-block;color: #9013fe;margin-left:8px;"> sexpert?</p>
+    </div>
+    <div style="margin-top: 120px;">
+      <%= link_to 'Take the Quiz', new_result_path, class: "btn btn-default btn_quiz" %>
+    </div>
+    <div style="margin-top:40px;">
+      <div>
+        <%= image_tag "logohomefooter.png", style: "width: 371px;height:auto;" %>
+      </div>
+    </div>
   </div>
 </div>
 

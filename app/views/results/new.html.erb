@@ -14,30 +14,36 @@
 <div style="clear:both;"></div>
 <div id="submit_results">
   <div class="frame">
+    <h2 style="font-size: 18px;">Submit your score to see how you compare!</h2>
   	<%= form_for :result, url: results_path do |f| %>
-  		
-  	  <div class="inline">
-  	    <%= f.label :age %><br>
-      </div>
-      <div class="inline">
-  	    <%= f.text_field :age %>
+  		<div>
+    	  <div class="inline">
+    	    <%= f.label :age %><br>
+        </div>
+        <div class="inline">
+    	    <%= f.text_field :age %>
+        </div>
       </div>
   	  
       <div style="clear:both;"></div>
-  	 
-  	  <div class="inline">
-  	    <%= f.label :school %><br>
-      </div>
-      <div class="inline">
-  	    <%= f.text_field :school %>
+  	   
+      <div style="position:relative;left: -12px;margin-top: 5px;">
+    	  <div class="inline">
+    	    <%= f.label :school %><br>
+        </div>
+        <div class="inline">
+    	    <%= f.text_field :school %>
+        </div>
       </div>
 
       <div style="clear:both;"></div>
-  	  <div class="inline">
-  	    <%= f.label :zip_code %><br>
-      </div>
-      <div class="inline">
-  	    <%= f.text_field :zip_code %>
+      <div style="position:relative;left: -19px;margin-top: 5px;">
+    	  <div class="inline">
+    	    <%= f.label :zip_code %><br>
+        </div>
+        <div class="inline">
+    	    <%= f.text_field :zip_code %>
+        </div>
       </div>
   	  
   	  <div style="display: none;">
@@ -50,8 +56,8 @@
         <%= f.text_field :bracket, id: "bracket_level" %>
       </div>
   	 
-  	  <p>
-  	    <%= f.submit %>
+  	  <p style="margin-top:10px;">
+  	    <%= f.submit 'Submit Result', { :class => 'btn btn_quiz' } %>
   	  </p>
   	<% end %>
   </div>
@@ -64,34 +70,104 @@
  var quiz = [
  
         {
-            "question" : "Q1: Using two condoms is safer.",
-            //"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/220px-Albert_Einstein_Head.jpg",
+            "question" : "Question 1: “Pulling out” doesn’t actually prevent pregnancy.",
+            "image" : "http://i.imgur.com/Wh9TYkQ.png",
             "choices" : [
                                     "True",
                                     "False"
                                 ],
-            "correct" : "False",
-            "explanation" : "Using two condoms increases the chances of breakage.",
+            "correct" : "True",
+            "explanation" : "Condoms and birth control are the only high-percentage pregnancy prevention methods.",
         },
         {
-            "question" : "You need a parent to get advice.",
+            "question" : "You need a parent to seek out advice on sex topics.",
             //"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/US_%242_obverse-high.jpg/320px-US_%242_obverse-high.jpg",
             "choices" : [
                                     "True",
                                     "False"
                                 ],
             "correct" : "False",
-            "explanation" : "You do not need a parent to get advice.  In fact there are many resources local to Los Angeles like ClarisHealth.org",
+            "explanation" : "Teachers, school counselors, and Claris Health clinics can all help when you’re not ready to talk to your parents about something.",
         },
         {
-            "question" : "You cannot get sexually transmitted diseases through anal sex.",
+            "question" : "Using two condoms lowers the risk for STDs or pregnancy.",
+            "image" : "http://i.imgur.com/QFLQtOu.png",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "False",
+            "explanation" : "One plus one does not equal twice as safe - it's actually much more risky.",
+        },
+        {
+            "question" : "If a couple is in love, they should definitely be having sex.",
             //"image" : "",
             "choices" : [
                                     "True",
                                     "False"
                                 ],
             "correct" : "False",
-            "explanation" : "You are just as susceptible to STD's doing anal intercourse as you are doing vaginal.  To reduce your risk use a condom.  To eliminate your risk practice, practice abstinence.  But hey who wants that?",
+            "explanation" : "People can be very much in love without rushing into sex.",
+        },
+        {
+            "question" : "You can get STDs just as easily from anal as other kinds of sex.",
+            "image" : "http://i.imgur.com/Kvg8OF0.png",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "True",
+            "explanation" : "Anal is far from a risk-free alternative and can be even riskier actually.",
+        },
+        {
+            "question" : "If your boyfriend/girlfriend asks nicely to do something sexual, you’re still allowed to say no.",
+            //"image" : "",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "True",
+            "explanation" : "Asking nicely has nothing to do with it - it's always your choice at the end.",
+        },
+        {
+            "question" : "Sending sexy pics to each other is a good harmless way to get sparks flying.",
+            "image" : "http://i.imgur.com/5XBBZ5Y.png",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "False",
+            "explanation" : "You never know where that picture will end up, and once it's out you never control it again.",
+        },
+        {
+            "question" : "Only people who “get around a lot” need to get tested for STDs.",
+            //"image" : "",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "False",
+            "explanation" : "It only takes one encounter to have a reason to get tested - it's always better to know.",
+        },
+        {
+            "question" : "Drunk people are just more honest about wanting to hook up.",
+            "image" : "http://i.imgur.com/PE8SQmh.png",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "False",
+            "explanation" : "Exactly the opposite - drunk consent isn't really consent at all.",
+        },
+        {
+            "question" : "Straight people are just as vulnerable to HIV & AIDS as gay and other sexualities.",
+            //"image" : "",
+            "choices" : [
+                                    "True",
+                                    "False"
+                                ],
+            "correct" : "True",
+            "explanation" : "HIV & AIDS is a threat all communities have to confront equally, and together.",
         },
      
 
