@@ -14,7 +14,9 @@
   }
   body {
       line-height:1;
-      font:normal 0.9em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: "Helvetica Neue";
+      font-weight: initial;
+      background: image-url('RealityCheckbg.jpg') fixed;
   }
   ol, ul {
       list-style:none;
@@ -24,15 +26,45 @@
   }
   #frame {
       //max-width:620px;
-      width:auto;
+      width:364px;
+      height: auto;
       background:#fff;
       padding:10px;
       margin:3px;
+      clear: both;
+      margin-top: 20px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      box-shadow: 3px 3px 5px #444;
   }
+  .frame {
+      //max-width:620px;
+      width:364px;
+      background:#fff;
+      padding:10px;
+      margin:3px;
+      clear: both;
+      margin-top: 20px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      box-shadow: 3px 3px 5px #444;
+  }
+
+  .frame_invisible {
+      //max-width:620px;
+      width:364px;
+      background:none;
+      padding:10px;
+      margin:3px;
+      clear: both;
+      margin-top: 20px;  }
+
   h1 {
       font:normal bold 2em/1.8em"Helvetica Neue", Helvetica, Arial, sans-serif;
       text-align:center;
-      border-bottom:1px solid #999;
+      //border-bottom:1px solid #999;
       padding:0;
       width:auto
   }
@@ -56,11 +88,26 @@
       height:auto;
   }
   #choice-block {
-      display:block;
-      list-style:none;
-      margin:0;
-      padding:0;
-  }
+    display:block;
+    list-style:none;
+    margin:0;
+    padding:0;
+    left: 1%;
+    margin-bottom: 3%;
+    position: relative; }
+    #choice-block li {
+      display: inline-block;
+      width: 48%;
+      background: #F6E11E;
+      padding: 20px;
+      border: none;
+      box-shadow: 1px 1px 2px #444;
+      }
+      #choice-block li:first-child {
+         margin-right: 1%; }
+      #choice-block li:last-child {
+        margin-left: 1%; }
+
   #submitbutton {
       background:#5a6b8c;
   }
@@ -75,13 +122,15 @@
   .choice-box {
       display:block;
       text-align:center;
-      margin:8px auto;
+      margin:1% auto;
       padding:10px 0;
-      border:1px solid #666;
       cursor:pointer;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
+      width: 98%;
+      border: none;
+      box-shadow: 1px 1px 2px #444;
   }
 
   #submit_results {

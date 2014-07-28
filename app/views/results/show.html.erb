@@ -1,7 +1,31 @@
-<div class="col-md-6 col-md-offset-3" style="margin-top:10%; text-align: center;">
-	<h2>Your results have been submitted.  Thank you!</h2>
-	<p>Further Information</p>
-	<p><a href="clarishealth.org">Claris Health</a></p>
+<% content_for :top_menu do %>
+	<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <!--<div class="frame"></div>-->
+            <%= image_tag "resultsheading.png", style: "width: 371px; height: auto; margin-top:10px;" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="col-md-4 col-md-offset-4" style="text-align: center;">
+	<div class="frame">
+		<p style="font-size:30px;display:inline-block;">Your a </p><p style="font-size:30px;display:inline-block;color: #9013fe;margin-left:8px;"><%= @result.bracket %></p>
+		<div style="clear:both; height: 20px; width:100%;"></div>
+		<p style="font-size:30px;display:inline-block;">Score:</p><p style="font-size:30px;display:inline-block;color: #9013fe;margin-left:8px;"><%= @result.score %>%</p>
+	</div>
+</div>
+
+<div class="col-md-4 col-md-offset-4">
+	<div class="frame">
+		<p style="margin: 10px;">You are not alone, we are here to answer your questions (within 24hrs.!):<a href="YourRealityCheck.org/ask-a-question">YourRealityCheck.org/ask-a-question</a></p>
+		<p>Learn more about other ways we empower individuals to make informed sexual health choices at our parent organization: <a href="clarishealth.org">ClarisHealth.org</a></p>
+	</div>
 </div>
 
 <div style="display:none;">

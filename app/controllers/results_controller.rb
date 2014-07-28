@@ -19,7 +19,7 @@ class ResultsController < ApplicationController
 
 	private
 	  def result_params
-	    params.require(:result).permit(:age, :school, :zip_code, :score)
+	    params.require(:result).permit(:age, :school, :zip_code, :score, :bracket)
 	  end
 
 end
