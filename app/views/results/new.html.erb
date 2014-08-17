@@ -1,8 +1,13 @@
 <% content_for :header_menu do %>
   
   <div class="col-md-4 col-md-offset-4">
-    <!--<div class="frame"></div>-->
-    <%= image_tag "quizheading.png", style: "width: 371px; height: auto; margin-top:10px;" %>
+    <div class="frame">
+      <div class="center">
+        <h3 style="display:inline-block;">Are you a</h3>
+        <h3 style="color: #9013fe;display:inline-block;margin-left:-9px;">sexpert?</h3>
+      </div>
+    </div>
+    <%#= image_tag "quizheading.png", style: "width: 371px; height: auto; margin-top:10px;" %>
   </div>
         
 <% end %>
@@ -283,12 +288,12 @@
          $('#question').empty();
          $('#choice-block').empty();
          $('#submitbutton').remove();
-         $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+         // $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
 
-         $(document.createElement('h2')).css({
-             'text-align': 'center',
-             'font-size': '4em'
-         }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+         // $(document.createElement('h2')).css({
+         //     'text-align': 'center',
+         //     'font-size': '4em'
+         // }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
 
          $('#submit_results').show();
          $("#score_amount").val(score / quiz.length * 100);
@@ -301,12 +306,21 @@
          // } else {
          //    $('#explanation').text("You are a casual sexpert!!");
          // };
-         
-         if ( score > 2 ) {
-            bracket = "sexpert";
+
+         if ( score >= 9 ) {
+            bracket = "You are a Savvy SexPert.  You have a good understanding of sexual health and boundaries. We encourage you to set high standards for yourself and to be a role model for your friends. Take a look around the site to learn even more."
+         } else if ( score < 9 && score >= 7 ) {
+            bracket = "Get a Study Buddy!  You have a basic understanding of sexual health and boundaries, but need to study up a little more in order to be a SexPert. We encourage you to think through your personal boundaries, and to look through this site to learn more about sex and relationships."
          } else {
-            bracket = "casual sexpert"
+            bracket = "Help is on the Way!  We love ya. Really, we do. And so please hear us when we say: You need to study up and get the facts about sex and relationships. Look through this site raise your Sexpertise and think through your values, boundaries, and sexual health."
          };
+         
+         // if ( score > 2 ) {
+         //    bracket = "sexpert";
+         // } else {
+         //    bracket = "casual sexpert"
+         // };
+
          $("#bracket_level").val(bracket);
  
      }
