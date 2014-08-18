@@ -1,3 +1,6 @@
+<%
+=begin
+%>
 <% content_for :header_menu do %>
   
   <div class=".col-xs-12 .col-sm-6 .col-sm-offset-3 col-md-4 col-md-offset-4">
@@ -11,6 +14,9 @@
   </div>
         
 <% end %>
+<%
+=end
+%>
 <!--hello-->
 <div class=".col-xs-12 .col-sm-6 .col-sm-offset-3 col-md-4 col-md-offset-4">
     <div id = "frame"
@@ -19,7 +25,7 @@
 <div style="clear:both;"></div>
 <div id="submit_results">
   <div class="frame">
-    <h2 style="font-size: 18px;">Submit your score to see how you compare!</h2>
+    <h2 style="font-size: 18px;">Receive your score by filling out the information below.</h2>
   	<%= form_for :result, url: results_path do |f| %>
   		<div>
     	  <div class="inline">
@@ -29,25 +35,24 @@
     	    <%= f.text_field :age %>
         </div>
       </div>
+
+      <div style="clear:both;height:10px;"></div>
+      <div style="position:relative;left: -19px;margin-top: 5px;">
+          <div class="inline">
+            <%= f.label :zip_code %><br>
+        </div>
+        <div class="inline">
+            <%= f.text_field :zip_code %>
+        </div>
+      </div>
   	  
-      <div style="clear:both;"></div>
-  	   
+      <div style="clear:both;height:10px;"></div>
       <div style="position:relative;left: -12px;margin-top: 5px;">
     	  <div class="inline">
     	    <%= f.label :school %><br>
         </div>
         <div class="inline">
     	    <%= f.text_field :school %>
-        </div>
-      </div>
-
-      <div style="clear:both;"></div>
-      <div style="position:relative;left: -19px;margin-top: 5px;">
-    	  <div class="inline">
-    	    <%= f.label :zip_code %><br>
-        </div>
-        <div class="inline">
-    	    <%= f.text_field :zip_code %>
         </div>
       </div>
   	  
@@ -61,8 +66,8 @@
         <%= f.text_field :bracket, id: "bracket_level" %>
       </div>
   	 
-  	  <p style="margin-top:10px;">
-  	    <%= f.submit 'Submit Result', { :class => 'btn btn_quiz' } %>
+  	  <p style="margin-top:40px;">
+  	    <%= f.submit 'Submit', { :class => 'btn btn_quiz' } %>
   	  </p>
   	<% end %>
   </div>
@@ -285,8 +290,11 @@
 
      function endQuiz() {
          $('#explanation').empty();
+         $('#explanation').remove();
          $('#question').empty();
+         $('#question').remove();
          $('#choice-block').empty();
+         $('#choice-block').remove();
          $('#submitbutton').remove();
          // $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
 

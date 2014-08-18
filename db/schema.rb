@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727233131) do
+ActiveRecord::Schema.define(version: 20140818013646) do
 
   create_table "results", force: true do |t|
     t.integer  "age"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140727233131) do
     t.integer  "score"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "bracket"
+    t.text     "bracket"
   end
 
 end
