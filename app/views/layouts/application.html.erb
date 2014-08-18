@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
 <% 
@@ -26,7 +27,7 @@
 %>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 .col-xs-12 .col-sm-12">
         <div class="row">
           <%= yield :header_menu %>
           <%= yield :top_menu %>
@@ -37,7 +38,7 @@
 
   <div class="container-fluid">
 	  <div class="row">
-	    <div class="col-md-12">
+	    <div class="col-md-12 .col-xs-12 .col-sm-12">
 	      <div class="row">
 					<%= yield %>
 				</div>
