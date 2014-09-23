@@ -24,6 +24,7 @@
 		<p style="font-size:30px;display:inline-block;">Score:</p><p style="font-size:30px;display:inline-block;color: #9013fe;margin-left:8px;"><%= @result.score %>%</p>
 		<div style="clear:both; height: 20px; width:100%;"></div>
 
+    <%= render partial: 'welcome/social_share' %>
 		<%#= link_to('Share on Facebook', 'https://www.facebook.com/dialog/feed?
                                   link=https://developers.facebook.com/docs/reference/dialogs/&
                                   picture=http://fbrell.com/f8.jpg&
@@ -33,14 +34,15 @@
                                   redirect_uri=http://mighty-brushlands-5068.herokuapp.com/',
                                   :target => :blank) %>
 
-		<a href="#" 
+
+		<!-- <a href="#" 
             onclick="
               window.open(
                 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
                 'facebook-share-dialog', 
                 'width=626,height=436'); 
-              return false;">
-      <%= image_tag "http://icons.iconarchive.com/icons/icontexto/social-inside/256/social-inside-facebook-icon.png", style: "width: 20%;height:auto;" %>
+              return false;"> -->
+      <%#= image_tag "http://icons.iconarchive.com/icons/icontexto/social-inside/256/social-inside-facebook-icon.png", style: "width: 20%;height:auto;" %>
     </a>
 	</div>
 </div>

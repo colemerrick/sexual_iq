@@ -1,0 +1,51 @@
+nav.share {display:inline-block;} /* shareable's nav tag */
+nav.share div {float:left;}
+nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium sized buttons */
+#___plusone_0 {font-size: default !important;}
+.fb_iframe_widget span { vertical-align: top; }
+.fb_edge_widget_with_comment { vertical-align: top;}
+.fb-like{display:inline-block}
+* html .fb-like{display:inline}/* ie6 inline block fix*/
+*+html .fb-like{display:inline}/* ie7 inline block fix*/
+
+/* social sharing */
+// .social_share {
+//   width: 100%;
+//   max-width: 100%;
+//   position: relative;
+//   margin-bottom: 15px;
+//   }
+//   .social_share li {
+//     display: inline-block;
+//     list-style-type: none;
+//     position: relative;
+//     top:0px;
+//     bottom:0px; }
+//     .social_share li:first-child {
+//       position: relative;
+//       top:-2px; }
+//     .social_share li span {
+//       bottom:-5px; }
+//       .social_share li div.fb-like {
+//         position: relative;
+//         top:-11px;
+//         }
+//         .social_share li a {
+//           position: relative;
+//           top: -2px;
+//         }
+//         .social_share li a.tumblr-button {
+//           position:relative;
+//           top:-8px;
+//           width: 63px;
+//         }
+//         .social_share li a.PIN_1409267705425_pin_it_button_20 {
+//           top: -2px; }
+//         .social_share li div#___plusone_0 {
+//           position:relative;
+//           top:-2px;
+//         }
+//         .social_share li:last-child {
+//           position: relative;
+//           top:-3px;
+//           }
