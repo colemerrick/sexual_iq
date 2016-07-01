@@ -1,3 +1,16 @@
+<a href="#" 
+  onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;"> 
+  <%= image_tag "http://icons.iconarchive.com/icons/icontexto/social-inside/256/social-inside-facebook-icon.png", style: "width: 20%;height:auto;" %>
+</a>
+
+<%
+=begin
+%>
 <%= twitter_button %>
 <%= facebook_button %>
 <%= pinterest_button %>
@@ -6,9 +19,9 @@
 <%= google_plus_button %>
 <%= tumblr_button %>
 <%= stumble_upon_button %>
-<%
-=begin
-%>
+
+
+<!-- even older -->
 <ul class="social_share">
   <li>
     <%= twitter_button %>
